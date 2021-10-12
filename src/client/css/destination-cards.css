@@ -1,0 +1,87 @@
+#details {
+    padding: 80px 20px
+}
+
+h2 {
+    font-size: 1.5 rem;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.destination-card-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.destination-card {
+    height: 100px;
+    max-width: 100%;
+    border-radius: 8px;     
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #F3F3F3;
+    margin-bottom: 36px;
+}
+
+.destination-card:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.france {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url("../assets/france.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.spain {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url("../assets/spain.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.japan {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url("../assets/japan.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thailand {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url("../assets/thailand.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) { 
+    #details {
+        padding: 64px 20px
+    }
+
+    .destination-card {
+        height: 120px;       
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #details {
+        padding: 72px 28px
+    }
+
+    h2 {
+        font-size: 1.75rem;       
+        margin-bottom: 36px;        
+    }
+
+    .destination-card {
+        height: 108px;       
+        margin-bottom: 20px;
+    }
+ }
