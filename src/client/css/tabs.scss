@@ -16,6 +16,8 @@
 .tabs li {
     list-style: none;
     padding: 12px;
+    width: 33%;
+    text-align: center;
 }
 
 .tabs li:hover {
@@ -89,7 +91,7 @@ h3 {
 }
 
 /* Images */
-.images {
+#images {
     padding-top: 20px;
 }
 
@@ -140,7 +142,7 @@ h3 {
 
 /* Trip details */
 
-.trip {
+#trip {
     padding-top: 20px;
 }
 .trip-details {

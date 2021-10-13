@@ -29,7 +29,7 @@
        
         <section id="details">
             <h2>Popular searches</h2>
-            <div class="destination-card-container">
+            <div class="destination-card-container d-none">
                 <div class="destination-card france">
                     <p>France</p>
                 </div>
@@ -43,13 +43,13 @@
                     <p>Japan</p>
                 </div>
             </div>      
-            <div class="tab-container d-none">
+            <div class="tab-container">
                 <ul class="tabs">
-                    <li class="selected">Weather</li>
-                    <li >Images</li>
-                    <li >Trip</li>
+                    <li data-id="weather" class="selected tab">Weather</li>
+                    <li data-id="images" class="tab">Images</li>
+                    <li data-id="trip" class="tab">Trip</li>
                 </ul>
-                <div class="weather d-none">
+                <div class="content" id="weather">
                     <h3>Current weather</h3>
                     <div class="date-condition-container">
                         <p class="date">11 / Oct / 2021</p>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             
-                <div class="images d-none">
+                <div class="content d-none" id="images">
                     <div class="image-card-container">
                         <div class="image-card france-temp">                        
                         </div>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="trip d-none">
+                <div class="content d-none" id="trip">
                     <div class="trip-details">
                         <p>Departing:</p>
                         <p id="departing">...</p>
