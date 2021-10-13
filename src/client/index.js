@@ -9,8 +9,20 @@ import spain from '../client/assets/spain.jpg'
 import thailand from '../client/assets/thailand.jpg'
 import japan from '../client/assets/japan.jpg'
 
+import { handleTabs } from './js/handleTabs';
+import { handleInput } from './js/handleInput'
 import { handleImages } from './js/handleImages'
+handleImages(bgImg, france, spain, thailand, japan )
 
+//handleTabs()
 
+const submitBtn = document.querySelector('#submit');
 
-handleImages(bgImg, france, spain, thailand, japan)
+submitBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    handleInput()
+})
+
+export {
+    handleTabs
+}

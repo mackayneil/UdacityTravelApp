@@ -19,3 +19,24 @@ app.get('/', function (req, res) {
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
+/* 
+app.post('/location', async(req, res) => {
+    const response = await fetch(`http://api.geonames.org/postalCodeLookupJSON?placename=${req.body.userLocation}&username=neilmackay01`);
+    try {
+        const json = await response.json();
+        res.send(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+}); */
+
+
+app.post('/location', async(req, res) => {
+    const response = await fetch(`http://api.geonames.org/postalCodeLookupJSON?placename=seattle&username=neilmackay01`);
+    try {
+        const json = await response.json();
+        res.send(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+});
