@@ -7,11 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2d4958e339.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/base.scss">
-    <link rel="stylesheet" href="../css/destination-cards.scss">
-    <link rel="stylesheet" href="../css/selector.scss">
-    <link rel="stylesheet" href="../css/tabs.scss">
+    <script src="https://kit.fontawesome.com/2d4958e339.js" crossorigin="anonymous"></script>   
     <title>Travel planning app</title>
 </head>
 <body>
@@ -33,7 +29,7 @@
        
         <section id="details">
             <h2>Popular searches</h2>
-          <!--   <div class="destination-card-container">
+            <div class="destination-card-container">
                 <div class="destination-card france">
                     <p>France</p>
                 </div>
@@ -46,8 +42,8 @@
                 <div class="destination-card thailand">
                     <p>Japan</p>
                 </div>
-            </div>   -->    
-            <div class="tab-container">
+            </div>      
+            <div class="tab-container d-none">
                 <ul class="tabs">
                     <li class="selected">Weather</li>
                     <li >Images</li>
@@ -128,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="trip ">
+                <div class="trip d-none">
                     <div class="trip-details">
                         <p>Departing:</p>
                         <p id="departing">...</p>
@@ -146,7 +142,7 @@
         </section>
 
 
-        <div id="background-img"  style="background-image: url('../assets/background-image.jpg');"></div>
+        <div id="background-img""></div>
     </main>
 </body>
 </html>
