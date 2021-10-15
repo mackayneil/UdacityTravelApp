@@ -1,6 +1,4 @@
-
-
-
+// Updates the weather info in the weather tab
 const updateWeather = (data) => {
     const condition = document.querySelector('.condition');
     const temp = document.querySelector('#temperature');

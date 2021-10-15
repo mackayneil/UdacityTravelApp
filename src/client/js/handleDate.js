@@ -1,3 +1,4 @@
+// Inputs the data for the trip tab
 const handleDate = (startDate, endDate) => {
     const months = { 
         1: "Jan",
@@ -25,14 +26,16 @@ const handleDate = (startDate, endDate) => {
     let month = date[1];
     let day = date[2];
     
+    // Calculates the length of the trip
     if (tripLength === 1 || tripLength === 0) {
         lengthOfTrip.innerHTML = `1 day`
     } else {
         lengthOfTrip.innerHTML = `${tripLength} days`
     }
-
+    // Inputs the chosen departing day
     departingDate.innerHTML = `${day} / ${months[month]} / ${year}`
 
+    // Calculates the number of days remaining
     if (daysRemaining === -1 || daysRemaining === 1) {
         daysLeft.innerHTML = `1 day`
     } else {

@@ -1,3 +1,4 @@
+// Updates the weather forecast
 const updateForecast = (data) => {
     const months = { 
         1: "Jan",
@@ -24,7 +25,7 @@ const updateForecast = (data) => {
         const weatherCode = data[i].weather.code;
         const expr = weatherCode.toString().charAt(0);
         let weatherIcon;
-       
+       // Matches the first number in the weather description code from the API
         if (weatherCode === 800) {
             weatherIcon = `☀️`;
         } else {

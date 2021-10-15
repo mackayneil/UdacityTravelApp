@@ -4,6 +4,7 @@ import { updateForecast } from './updateForecast';
 import { updateCurrentDate } from './updateCurrentDate';
 import { updateImages } from './updateImages';
 import { handleDate } from './handleDate';
+import { clearInputs } from './clearInputs';
 
 const handleInput = async () => {
     let long;
@@ -13,18 +14,18 @@ const handleInput = async () => {
 
     const userLocation = document.querySelector('#location').value;
     const userLocationValue = { userLocation };
-    const startDate = document.querySelector('#trip-start');
-    const startDateValue = startDate.value;
+    const startDate = document.querySelector('#trip-start'); 
     const endDate = document.querySelector('#trip-end');
+    const endDateValue = endDate.value;
     const warningMsg = document.querySelector('.warning-message');
 
 
 
-    if (userLocation === '' || startDateValue === '') {        
+    if (userLocation === '' || endDateValue === '') {        
        warningMsg.classList.remove('d-none')
       } else { 
         warningMsg.classList.add('d-none')
-        handleDate(startDate, endDate)       
+        handleDate(startDate, endDate)               
         fetch('http://localhost:8080/location', {
                 method: 'POST',
                 credentials: 'same-origin',           
@@ -51,10 +52,11 @@ const handleInput = async () => {
                   .then(res => res.json())
                   .then(function (res) {  
                       const data = res.data[0];                     
-                      updateWeather(data)
-                      updateDetailsPanel(data)
+                      updateWeather(data);
+                      updateDetailsPanel();                    
                       city = data.city_name;
-                      updateCurrentDate()
+                      updateCurrentDate();
+                      clearInputs();
                   }
                 ).then(function() {
                     cityObj = { city }
@@ -79,18 +81,16 @@ const handleInput = async () => {
                       headers: {
                           'Content-Type': 'application/json'
                       },
-                      body: JSON.stringify(cityObj),
+                      body: JSON.stringify(userLocationValue),
                   })
                     .then(res => res.json())
-                    .then(function (res) { 
-                      updateImages(res)
+                    .then(function (res) {                      
+                      updateImages(res);
                     }
                   ); 
-              }); ;    
+              });    
             })
         }
-
- 
 }
 
 

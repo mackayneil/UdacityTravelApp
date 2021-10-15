@@ -27,7 +27,7 @@ app.listen(8080, function () {
     console.log('Example app listening on port 8080!')
 })
 
-
+// Gets the coordinates from the user input
 app.post('/location', async(req, res) => {
     const response = await fetch(`http://api.geonames.org/postalCodeLookupJSON?placename=${req.body.userLocation}&username=${geonameApiKey}`);
     try {
@@ -38,6 +38,7 @@ app.post('/location', async(req, res) => {
       }
 });
 
+// Uses the coordinates from the user input to get the weather
 app.post('/weather', async(req, res) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/current?lat=${req.body.lat}&lon=${req.body.long}&key=${weatherbitApiKey}`);
     try {
@@ -48,7 +49,7 @@ app.post('/weather', async(req, res) => {
       }
 });
 
-
+// Gets the weather forecast
 app.post('/forecast', async(req, res) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${req.body.city}&&key=${weatherbitApiKey}`);
     try {
@@ -59,9 +60,9 @@ app.post('/forecast', async(req, res) => {
       }
 });
 
-
+// Gets the images from the user city input
 app.post('/images', async(req, res) => {
-    const response = await fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${req.body.city}&image_type=photo`);
+    const response = await fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${req.body.userLocation}&image_type=photo`);
     try {
         const json = await response.json();
         res.send(json);
