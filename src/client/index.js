@@ -10,8 +10,9 @@ import thailand from '../client/assets/thailand.jpg'
 import japan from '../client/assets/japan.jpg'
 
 import { handleTabs } from './js/handleTabs';
-import { handleInput } from './js/handleInput'
-import { handleImages } from './js/handleImages'
+import { handleInput } from './js/handleInput';
+import { handleImages } from './js/handleImages';
+import { getTodayDate } from './js/getTodayDate';
 handleImages(bgImg, france, spain, thailand, japan )
 
 //handleTabs()
@@ -24,5 +25,6 @@ submitBtn.addEventListener('click', function(e) {
 })
 
 export {
-    handleTabs
+    handleTabs,
+    getTodayDate
 }

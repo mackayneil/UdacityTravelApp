@@ -19,7 +19,7 @@ main {
     main {
         display: grid;
         grid-template-columns: 60% 1fr;
-        grid-template-rows: 100vh;
+        grid-template-rows: auto;
     } 
 }
 
@@ -27,7 +27,6 @@ main {
     main {
         display: grid;
         grid-template-columns: 70% 1fr;
-        grid-template-rows: 100vh;
     } 
 }
 

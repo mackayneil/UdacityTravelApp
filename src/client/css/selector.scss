@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;    
-    justify-content: space-between;
+    min-height: 100vh;
     padding: 40px 20px;      
 }
 
@@ -39,10 +39,20 @@ form label {
     top: 80px;
     width: 100%;
     padding: 16px 0px;
+    max-width: 400px;
+}
+
+.search-card-inputs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 400px;
+}
+
+.warning-message {
+    padding: 0px 12px;
+    margin: 0px;
+    font-size: 0.75rem;
+    color: rgb(146, 52, 52);
 }
 
 .input-container {
@@ -65,6 +75,10 @@ form label {
 }
 
 #trip-start {
+    min-width: 100%;
+}
+
+#trip-end {
     min-width: 100%;
 }
 
@@ -109,15 +123,19 @@ form label {
 
     .search-card {     
         max-width: 600px;
-        top: 0px;
+        top: 400px;
     }
 
     #location {
-        min-width: 280px;
+        min-width: 180px;
     }
     
     #trip-start {
-        min-width: 140px;
+        min-width: 120px;
+    }
+
+    #trip-end {
+        min-width: 120px;
     }
 
 }
@@ -130,10 +148,15 @@ form label {
     .search-card {
         padding: 32px 40px;    
         display: flex;
+        flex-direction: column;
+        max-width: min-content;
+    }
+
+    .search-card-inputs {
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
-        max-width: 600px;
     }
 
 }

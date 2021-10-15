@@ -26,11 +26,6 @@ h2 {
     margin-bottom: 36px;
 }
 
-.destination-card:hover {
-    cursor: pointer;
-    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
-}
-
 .france {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url("../assets/france.jpg");
     background-position: bottom;

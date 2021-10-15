@@ -15,21 +15,28 @@
         <section id="selector">
             <h1>Where are you travelling to next?</h1>
             <form class="search-card">
-                <div class="input-container">
-                    <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
-                    <input type="text" name="location" id="location" placeholder="Where do you want to go?">
+                <div class="search-card-inputs">
+                    <div class="input-container">
+                        <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                        <input type="text" name="location" id="location" placeholder="Where do you want to go?">
+                    </div>
+                    <div class="input-container">
+                        <label for="trip-start"><i class="fas fa-calendar-alt"></i> Start date</label>
+                        <input type="date" id="trip-start" name="trip-start" placeholder="Start date"> 
+                    </div>  
+                    <div class="input-container">
+                        <label for="trip-end"><i class="fas fa-calendar-alt"></i> End date</label>
+                        <input type="date" id="trip-end" name="trip-end" placeholder="End date"> 
+                    </div>                          
+                    <input id="submit" type="submit" value="Submit">
                 </div>
-                <div class="input-container">
-                    <label for="trip-start"><i class="fas fa-calendar-alt"></i> Date</label>
-                    <input type="date" id="trip-start" name="trip-start" placeholder="Start date"> 
-                </div>               
-                <input id="submit" type="submit" value="Submit">
-            </form>           
+                <p class="warning-message d-none">Please enter a valid location and date range</p>             
+            </form>                
         </section>
        
         <section id="details">
-            <h2>Popular searches</h2>
-            <div class="destination-card-container d-none">
+            <h2 id="details-header">Popular searches</h2>
+            <div class="destination-card-container">
                 <div class="destination-card france">
                     <p>France</p>
                 </div>
@@ -43,7 +50,7 @@
                     <p>Japan</p>
                 </div>
             </div>      
-            <div class="tab-container">
+            <div class="tab-container d-none">
                 <ul class="tabs">
                     <li data-id="weather" class="selected tab">Weather</li>
                     <li data-id="images" class="tab">Images</li>
@@ -54,6 +61,10 @@
                     <div class="date-condition-container">
                         <p class="date">11 / Oct / 2021</p>
                         <p class="condition">Clear sky ☀️</p>
+                    </div>
+                    <div class="weather-details">
+                        <p>Temperature:</p>
+                        <p id="temperature">...</p>
                     </div>
                     <div class="weather-details">
                         <p>Humidity:</p>
@@ -73,54 +84,13 @@
                     </div>
 
                     <h3>Forecast</h3>
-
-                    <div class="forecast-card">
-                        <div>
-                            <p class="forecast-date">12 / Oct</p>
-                            <p class="forecast-condition">Clear sky ☀️</p>
-                        </div>
-                        <p class="max-min">12° / 3°</p>
-                    </div>
-                    <div class="forecast-card">
-                        <div>
-                            <p class="forecast-date">12 / Oct</p>
-                            <p class="forecast-condition">Clear sky ☀️</p>
-                        </div>
-                        <p class="max-min">12° / 3°</p>
-                    </div>
-                    <div class="forecast-card">
-                        <div>
-                            <p class="forecast-date">12 / Oct</p>
-                            <p class="forecast-condition">Clear sky ☀️</p>
-                        </div>
-                        <p class="max-min">12° / 3°</p>
-                    </div>
-                    <div class="forecast-card">
-                        <div>
-                            <p class="forecast-date">12 / Oct</p>
-                            <p class="forecast-condition">Clear sky ☀️</p>
-                        </div>
-                        <p class="max-min">12° / 3°</p>
-                    </div>
-                    <div class="forecast-card">
-                        <div>
-                            <p class="forecast-date">12 / Oct</p>
-                            <p class="forecast-condition">Clear sky ☀️</p>
-                        </div>
-                        <p class="max-min">12° / 3°</p>
-                    </div>
+                    <div class="forecast-cards">
+                      
+                    </div>            
                 </div>
             
                 <div class="content d-none" id="images">
-                    <div class="image-card-container">
-                        <div class="image-card france-temp">                        
-                        </div>
-                        <div class="image-card spain-temp">                        
-                        </div>
-                        <div class="image-card japan-temp">                        
-                        </div>
-                        <div class="image-card thailand-temp">                        
-                        </div>
+                    <div class="image-card-container">                      
                     </div>
                 </div>
 
