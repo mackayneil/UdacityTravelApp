@@ -21,7 +21,10 @@ const handleTabs = () => {
         };
     }
 
-    tabs.addEventListener('click', toggleTabs)
+    if (tabs) {
+        tabs.addEventListener('click', toggleTabs)
+    }
+    
 }
 handleTabs()
 

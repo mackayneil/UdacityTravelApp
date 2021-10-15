@@ -8,13 +8,21 @@ const getTodayDate = () => {
     const startDate = document.querySelector('#trip-start');
     const endDate = document.querySelector('#trip-end');
 
-    startDate.setAttribute('min', `${year}-${month}-${day}`)
-    endDate.setAttribute('disabled', true)
+ 
 
-    startDate.addEventListener('change', function() {
-        endDate.removeAttribute('disabled')       
-        endDate.setAttribute('min', `${startDate.value}`)        
-    })
+    if (endDate) {
+        endDate.setAttribute('disabled', true)
+    }
+
+    if (startDate) {
+        startDate.setAttribute('min', `${year}-${month}-${day}`);
+        startDate.addEventListener('change', function() {
+            endDate.removeAttribute('disabled')       
+            endDate.setAttribute('min', `${startDate.value}`)        
+        })
+    }
+
+ 
 }
 getTodayDate()
 

@@ -6,7 +6,7 @@ import { updateImages } from './updateImages';
 import { handleDate } from './handleDate';
 import { clearInputs } from './clearInputs';
 
-const handleInput = async () => {
+async function handleInput(){
     let long;
     let lat
     let city;
