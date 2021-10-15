@@ -1,3 +1,4 @@
+// Assigns the background images to the UI when page loads - needed because webpack doesn't find the URL's
 const handleImages = (bgImg, franceImg, spainImg, thailandImg, japanImg) => {
     const backgroundImg = document.querySelector("#background-img");
     const france = document.querySelector('.france');

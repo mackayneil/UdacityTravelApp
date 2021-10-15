@@ -1,3 +1,4 @@
+// Gets todays date to update the date pickers to prevent user from selecting a day in the past
 const getTodayDate = () => {
     const currentDate = new Date()
     const month = currentDate.getMonth() + 1;

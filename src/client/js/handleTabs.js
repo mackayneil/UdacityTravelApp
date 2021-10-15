@@ -1,3 +1,4 @@
+// Functionality for switching tabs
 const handleTabs = () => {
     const tabs = document.querySelector('.tabs')
     const tab = document.querySelectorAll('.tab')

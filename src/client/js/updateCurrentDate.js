@@ -1,3 +1,4 @@
+// Updates current date on the weather tab
 const updateCurrentDate = () => {
     const months = { 
         0: "Jan",
